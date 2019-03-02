@@ -1,4 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<h1>hello world</h1>, document.getElementById('root'));
+import TodoAdd from './components/TodoAdd';
+import TodoList from './components/TodoList';
+
+// 引入仓库的实例
+// import store from './store/index';
+
+ReactDOM.render(
+  <div>
+    <TodoAdd />
+    <TodoList />
+  </div>,
+  document.getElementById('root')
+);
