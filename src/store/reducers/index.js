@@ -2,9 +2,9 @@
 // combineReducers 帮我们做合并
 import { combineReducers } from 'redux';
 
-import todo from './todo';
-import cart from './cart';
-import product from './product';
+import todo from '@/store/reducers/todo';
+import cart from '@/store/reducers/cart';
+import product from '@/store/reducers/product';
 
 export default combineReducers({
   todos: todo,

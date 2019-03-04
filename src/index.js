@@ -7,6 +7,7 @@ import store from './store/index';
 import CartApp from './views/CartApp';
 import TodoApp from './views/TodoApp';
 
+import './index.less';
 
 // 引入仓库的实例
 // import store from './store/index';
