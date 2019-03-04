@@ -1,4 +1,6 @@
 // 主的 reducer
+import { ADD_TODO, ADD_CART, JIAN_CART } from '../actions/types';
+
 // 初始化的状态
 let defaultState = {
   todos: [
@@ -39,7 +41,7 @@ let hhh = (prevState = defaultState, action) => {
   let state = JSON.parse(JSON.stringify(prevState));
 
   switch (action.type) {
-    case 'ADD_TODO':
+    case ADD_TODO:
       // 下面这样，违背了纯函数的使用
       // state.todos.push({
       //   text: action.text
@@ -54,7 +56,7 @@ let hhh = (prevState = defaultState, action) => {
       state.todos[action.index].isOk = !state.todos[action.index].isOk;
       break;
 
-    case 'ADD_CART':
+    case ADD_CART:
       // 判断当前商品是否存在购物车中，
       var id = action.product.id; // 商品id
       var curProduct = state.carts.find(item => {
@@ -75,7 +77,7 @@ let hhh = (prevState = defaultState, action) => {
       }
       break;
 
-    case 'JIAN_CART':
+    case JIAN_CART:
       // 判断当前商品是否存在购物车中，
       var id = action.product.id; // 商品id
       var curProduct = state.carts.find(item => {

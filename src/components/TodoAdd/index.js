@@ -2,6 +2,7 @@
 // 容器组件的写法，不是我们主动去定义组件，而是通过 react-redux connect() 去连接UI组件，返回容器组件。
 import { connect } from 'react-redux';
 import UI from './ui';
+import { addTodo } from '../../store/actions/index';
 
 /**
  * state 就是仓库中的 state
@@ -22,14 +23,14 @@ let mapStateToProps = (state) => {
 let mapDispatchToProps = (dispatch) => {
   return {
     addTodo: (value) => {
-      // console.log('容器组件中的 addTodo 被调用')
+      // // console.log('容器组件中的 addTodo 被调用')
 
-      // 派发动作
-      let action = {
-        type: 'ADD_TODO',
-        text: value
-      }
-      dispatch(action)
+      // // 派发动作
+      // let action = {
+      //   type: 'ADD_TODO',
+      //   text: value
+      // }
+      dispatch(addTodo(value));
     }
   }
 }

@@ -21,9 +21,10 @@ ReactDOM.render(
             <NavLink to="/cart">购物车</NavLink>
           </li>
         </ul>
-
-        <Route path="/todo" component={TodoApp}></Route>
-        <Route path="/cart" component={CartApp}></Route>
+        <Switch>
+          <Route path="/todo" component={TodoApp}></Route>
+          <Route path="/cart" component={CartApp}></Route>
+        </Switch>
       </div>
     </Router>
   </Provider>,
