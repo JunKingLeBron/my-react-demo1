@@ -15,3 +15,4 @@ react-redux , 专门提供给 react 项目更好的去使用 redux的一个包�
   是因为咱们在 index.js 引入了 仓库的文件，并且使用 Provider 做为最外层的一个组件，将store 做为属性给设置了。
 
 3. 页面使用的是 容器组件。
+ch
